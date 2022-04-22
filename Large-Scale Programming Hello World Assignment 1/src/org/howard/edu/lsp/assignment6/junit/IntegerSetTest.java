@@ -199,10 +199,12 @@ public class IntegerSetTest {
 
 	   @Test
 	   public void testIsEmpty2() {
-	       IntegerSet set1 = new IntegerSet();
-	       set1.add(10);
-	       set1.add(20);
-	       assertFalse(set1.isEmpty());
+	       int[] a = { };
+	       int[] b = { 1, 2, 3};
+	       IntegerSet emptySet = new IntegerSet(a);
+	       IntegerSet set = new IntegerSet(b);
+	       assertTrue(emptySet.isEmpty());
+	       assertFalse(set.isEmpty());
 	   }
 
 	   @Test
